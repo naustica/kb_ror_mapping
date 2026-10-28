@@ -1,0 +1,47 @@
+[
+  {
+    "mode": "NULLABLE",
+    "name": "inst_name",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "parent_inst_name",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "relationship",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inst_type",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "federal_state",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "inst_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "parent_inst_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "ror_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "NULLABLE",
+    "name": "parent_ror_id",
+    "type": "STRING"
+  }
+]
