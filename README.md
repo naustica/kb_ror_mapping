@@ -13,7 +13,7 @@ wenn man übergeordnete Strukturen oder regionale Verteilungen untersuchen möch
 
 ## Datensatz
 
-Für das Datenset wurden die folgenden Datenquellen miteinander kombiniert:
+Für den Datensatz wurden die folgenden Datenquellen miteinander kombiniert:
 
 - [GERiT](https://gerit.org/de/)
 - [OpenAlex](https://openalex.org)
@@ -22,7 +22,7 @@ Für das Datenset wurden die folgenden Datenquellen miteinander kombiniert:
 Um die Daten nachzunutzen, stehen folgende Optionen zur Verfügung:
 
 - [Google BigQuery](https://console.cloud.google.com/bigquery?ws=!1m4!1m3!3m2!1ssubugoe-collaborative!2sresources): subugoe-collaborative.resources.oal_kb_inst_map (frei zugänglich)
-- [GitHub](data/oal_kb_inst_map.jsonl): Die Datei `oal_kb_inst_map.jsonl` enthält das komplette Datenset
+- [GitHub](data/oal_kb_inst_map.jsonl): Die Datei `oal_kb_inst_map.jsonl` enthält den kompletten Datensatz
 
 ### Datenschema
 
@@ -38,6 +38,8 @@ Um die Daten nachzunutzen, stehen folgende Optionen zur Verfügung:
 | ror_id | STRING | ROR ID (aus OpenAlex) |
 | parent_ror_id | STRING | ROR ID der übergeordneten Einrichtung |
 
+Beispiel: 
+
 ```json
 {
   "inst_name": "Niedersächsische Staats- und Universitätsbibliothek Göttingen", 
@@ -51,6 +53,36 @@ Um die Daten nachzunutzen, stehen folgende Optionen zur Verfügung:
   "parent_ror_id": "https://ror.org/01y9bpm73"
 }
 ```
+
+### Einrichtungstypen
+
+Einrichtungen werden in folgende Kategorien organisiert.
+
+| Einrichtungsart | Abkürzung |
+| --- | --- |
+| Fachhochschulen | fh |
+| Max-Planck-Gesellschaft | mpg |
+| Helmholtz-Gemeinschaft | hgf |
+| Fraunhofer-Gesellschaft | fhg |
+| Leibniz-Gemeinschaft | wgl |
+| Ressortforschung-Bund | res-b |
+| Wirtschaft | com |
+| Akademien der Wissenschaften | akad |
+| Arbeitsgemeinschaft industrieller Forschungsvereinigungen | aif |
+| Internationale Organisationen | int |
+| Praxen/Labore | prax |
+| Sonstige | sonst |
+| Privatadressen | priv |
+| Ressortforschung-Länder | res-l |
+| Ausländische Organisationen | foreign |
+| Behörden/öffentliche Einrichtungen | pub |
+| Vereine/Verbände | ev |	
+| Forschungsverbände, Virtuelle Einrichtungen | virt |
+| Kliniken (ausgenommen Universitätskliniken) | hosp |
+| Universitäten | uni |
+| Kunst- und Musikhochschule | khmh |
+| Sonstige Forschung DFG | sfdfg |
+
 
 ## Beispiele
 
