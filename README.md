@@ -179,8 +179,8 @@ WHERE parent_inst_name = 'Georg-August-Universität Göttingen'
 
 ## Wie kann ich eine Änderung am Datensatz vornehmen?
 
-Fehler oder Änderungsvorschläge können über ein [Issue](https://github.com/naustica/kb_ror_mapping/issues)
-vorgeschlagen werden.
+Änderungsvorschläge können über ein [Issue](https://github.com/naustica/kb_ror_mapping/issues)
+eingereicht werden.
 
 ## Nutzung von KI
 
