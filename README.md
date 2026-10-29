@@ -3,7 +3,7 @@
 ## Beschreibung
 
 Bei der Analyse von Publikationen in OpenAlex stößt man häufig auf Schwierigkeiten, wenn es darum geht, 
-die zugehörigen Einrichtungen gezielt nach bestimmten Kriterien zu filtern. So fehlt die 
+die zugehörigen deutschen Einrichtungen gezielt nach bestimmten Kriterien zu filtern. So fehlt die 
 Möglichkeit, Einrichtungen nach ihrem Typ zu unterscheiden – etwa zwischen Universitäten, Fachhochschulen oder Forschungsinstituten. 
 Auch eine Filterung nach dem Bundesland ist nicht direkt möglich, was die räumliche Analyse von Forschungsaktivitäten erschwert. 
 Zudem werden viele Einrichtungen in OpenAlex in mehrere Teileinheiten aufgeteilt, wie beispielsweise die Universität selbst, 
