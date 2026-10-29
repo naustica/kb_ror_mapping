@@ -177,6 +177,11 @@ WHERE parent_inst_name = 'Georg-August-Universität Göttingen'
 | Universitätsverlag Göttingen | Georg-August-Universität Göttingen | child | uni | Niedersachsen | https://openalex.org/I4405263319 | https://openalex.org/I74656192 | https://ror.org/057621003 | https://ror.org/01y9bpm73 |
 | Campus-Institut Data Science (CIDAS) | Georg-August-Universität Göttingen | child | uni | Niedersachsen | https://openalex.org/I4405263634 | https://openalex.org/I74656192 | https://ror.org/044sxzm68 | https://ror.org/01y9bpm73 |
 
+## Wie kann ich eine Änderung am Datensatz vornehmen?
+
+Fehler oder Änderungsvorschläge können über ein [Issue](https://github.com/naustica/kb_ror_mapping/issues)
+vorgeschlagen werden.
+
 ## Nutzung von KI
 
 Die Dokumentation wurde mit Hilfe von [GWDG Chat AI](https://docs.hpc.gwdg.de/services/ai-services/chat-ai/index.html) und [Qwen](https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507-FP8) erstellt. 
