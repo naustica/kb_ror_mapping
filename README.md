@@ -102,14 +102,12 @@ WHERE publication_year = 2025
   AND type = 'article'
   AND inst_type = 'uni'
 GROUP BY parent_inst_name
-ORDER BY n DESC
+ORDER BY number_of_articles DESC
 LIMIT 10
 ```
 
 | university_name | number_of_articles |
 | --- | --- |
-| Freie Universität Berlin | 10497 |
-| Humboldt-Universität zu Berlin | 10083 |
 | Ludwig-Maximilians-Universität München (LMU) | 9794 |
 | Technische Universität München (TUM) | 9394 |
 | Ruprecht-Karls-Universität Heidelberg | 9229 |
@@ -118,6 +116,8 @@ LIMIT 10
 | Universität Hamburg | 7416 |
 | Technische Universität Dresden | 6321 |
 | Friedrich-Alexander-Universität Erlangen-Nürnberg | 5695 |
+| Rheinische Friedrich-Wilhelms-Universität Bonn | 5688 |
+| Eberhard Karls Universität Tübingen | 5549 |
 
 ### In welchem Bundesland werden die meisten Publikationen veröffentlicht?
 
