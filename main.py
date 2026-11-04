@@ -153,11 +153,13 @@ def create_output_file(gerit_file: str,
 
     df = df.sort_values(by=['inst_type', 'parent_inst_name', 'relationship'], ascending=False)
 
-    with open(os.path.join(PROJECT_PATH, output_file), 'w') as f:
+    with open(os.path.join(PROJECT_PATH, output_file + '.jsonl'), 'w') as f:
         result = [simplejson.dumps(record, ensure_ascii=False, ignore_nan=True) for record in
                   df.to_dict(orient='records')]
         for line in result:
             f.write(line + '\n')
+
+    df.to_csv(os.path.join(PROJECT_PATH, output_file + '.csv'), index=False)
 
 
 if __name__ == '__main__':
@@ -165,7 +167,7 @@ if __name__ == '__main__':
         gerit_file='raw_data/institutionen_gerit_202610.xlsx',
         kb_table='openalex-475813.oal_b_20260330.add_institution_lookup_kb',
         oal_table='subugoe-collaborative.openalex_walden.institutions',
-        output_file='data/oal_kb_inst_map.jsonl',
+        output_file='data/oal_kb_inst_map',
         use_cache=True
     )
 

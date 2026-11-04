@@ -22,7 +22,8 @@ Für den Datensatz wurden die folgenden Datenquellen miteinander kombiniert:
 Um die Daten nachzunutzen, stehen folgende Optionen zur Verfügung:
 
 - [Google BigQuery](https://console.cloud.google.com/bigquery?ws=!1m4!1m3!3m2!1ssubugoe-collaborative!2sresources): subugoe-collaborative.resources.oal_kb_inst_map (frei zugänglich)
-- [GitHub](data/oal_kb_inst_map.jsonl): Die Datei `oal_kb_inst_map.jsonl` enthält den kompletten Datensatz
+- [CSV](data/oal_kb_inst_map.csv): Die Datei `oal_kb_inst_map.csv` enthält den kompletten Datensatz
+- [JSONL](data/oal_kb_inst_map.jsonl): Die Datei `oal_kb_inst_map.jsonl` enthält den kompletten Datensatz
 
 ### Datenschema
 
@@ -159,7 +160,7 @@ ORDER BY number_of_articles DESC
 
 ```sql
 SELECT *
-FROM `subugoe-collaborative.resources.oal_kb_inst_map` 
+FROM subugoe-collaborative.resources.oal_kb_inst_map
 WHERE parent_inst_name = 'Georg-August-Universität Göttingen'
 ```
 
