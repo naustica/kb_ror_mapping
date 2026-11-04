@@ -137,7 +137,7 @@ def create_output_file(gerit_file: str,
 
     # os.remove(gerit_csv)
 
-    gerit_data.rename(columns={'inst_name': 'parent_inst_name'}, inplace=True)
+    gerit_data = gerit_data.rename(columns={'inst_name': 'parent_inst_name'})
 
     df = oal_data.merge(kb_data, on='parent_ror_id', how='inner')
     df = df.merge(gerit_data[['federal_state', 'dfg_inst_id']], on='dfg_inst_id', how='left')
@@ -151,9 +151,7 @@ def create_output_file(gerit_file: str,
 
     df = df[df.relationship != 'related']
 
-    df.sort_values(by=['inst_type', 'parent_inst_name', 'relationship'],
-                   ascending=False,
-                   inplace=True)
+    df = df.sort_values(by=['inst_type', 'parent_inst_name', 'relationship'], ascending=False)
 
     with open(os.path.join(PROJECT_PATH, output_file), 'w') as f:
         result = [simplejson.dumps(record, ensure_ascii=False, ignore_nan=True) for record in
