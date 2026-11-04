@@ -149,6 +149,18 @@ def create_output_file(gerit_file: str,
         df.loc[(df.inst_name == row.inst_name) & (
                     df.parent_inst_name == row.parent_inst_name), 'relationship'] = row.relationship
 
+    df.loc[df.parent_inst_name == 'Universitätsklinikum Gießen und Marburg GmbH - UKGM', 'federal_state'] = 'Hessen'
+    df.loc[df.parent_inst_name == 'Munich Center for Quantum Science and Technology', 'federal_state'] = 'Bayern'
+    df.loc[df.parent_inst_name == 'Medizinische Akademie Erfurt', 'federal_state'] = 'Thüringen'
+    df.loc[df.parent_inst_name == 'Helmholtz-Institut Mainz (HIM)', 'federal_state'] = 'Rheinland-Pfalz'
+    df.loc[df.parent_inst_name == 'Comprehensive Cancer Center Mainfranken (CCC Mainfranken)', 'federal_state'] = 'Bayern'
+    df.loc[df.parent_inst_name == 'Comprehensive Cancer Center Erlangen-EMN', 'federal_state'] = 'Bayern'
+    df.loc[df.parent_inst_name == 'Fachhochschule Oldenburg/Ostfriesland/Wilhelmshaven', 'federal_state'] = 'Niedersachsen'
+    df.loc[df.parent_inst_name == 'Leibniz-Fachhochschule', 'federal_state'] = 'Niedersachsen'
+    df.loc[df.parent_inst_name == 'Hochschule für angewandte Wissenschaften - Fachhochschule Aschaffenburg', 'federal_state'] = 'Bayern'
+    df.loc[df.parent_inst_name == 'Beuth Hochschule für Technik Berlin', 'federal_state'] = 'Berlin'
+    df.loc[df.parent_inst_name == 'International University in Germany', 'federal_state'] = 'Baden-Württemberg'
+
     df = df[df.relationship != 'related']
 
     df = df.sort_values(by=['inst_type', 'parent_inst_name', 'relationship'], ascending=False)

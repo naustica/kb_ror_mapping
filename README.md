@@ -141,10 +141,10 @@ ORDER BY number_of_articles DESC
 | --- | --- |
 | Nordrhein-Westfalen | 38609 |
 | Bayern | 31813 |
-| Baden-Württemberg | 25895 |
+| Baden-Württemberg | 25901 |
 | Berlin | 16126 |
 | Niedersachsen | 14876 |
-| Hessen | 12500 |
+| Hessen | 12807 |
 | Sachsen | 11653 |
 | Hamburg | 8449 |
 | Rheinland-Pfalz | 6354 |
