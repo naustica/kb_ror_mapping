@@ -93,13 +93,12 @@ SELECT
   parent_inst_name AS university_name, 
   COUNT(DISTINCT(doi)) AS number_of_articles
 FROM subugoe-collaborative.openalex_walden.works AS oal
-LEFT JOIN UNNEST(authorships) AS aut
-LEFT JOIN UNNEST(aut.affiliations) AS aff
-LEFT JOIN UNNEST(aff.institution_ids) AS oal_inst_id 
+JOIN UNNEST(authorships) AS aut
+JOIN UNNEST(aut.institutions) AS inst
 JOIN subugoe-collaborative.resources.oal_kb_inst_map AS kb
-  ON oal_inst_id = kb.inst_id
+  ON inst.id = kb.inst_id
 WHERE publication_year = 2025 
-  AND type = 'article'
+  AND oal.type = 'article'
   AND inst_type = 'uni'
 GROUP BY parent_inst_name
 ORDER BY number_of_articles DESC
@@ -108,15 +107,15 @@ LIMIT 10
 
 | university_name | number_of_articles |
 | --- | --- |
-| Ludwig-Maximilians-Universität München (LMU) | 9794 |
-| Technische Universität München (TUM) | 9394 |
-| Ruprecht-Karls-Universität Heidelberg | 9152 |
-| Rheinisch-Westfälische Technische Hochschule Aachen | 8551 |
-| Charité - Universitätsmedizin Berlin | 7768 |
-| Universität Hamburg | 7394 |
+| Ludwig-Maximilians-Universität München (LMU) | 9795 |
+| Technische Universität München (TUM) | 9395 |
+| Ruprecht-Karls-Universität Heidelberg | 9154 |
+| Rheinisch-Westfälische Technische Hochschule Aachen | 8554 |
+| Charité - Universitätsmedizin Berlin | 7769 |
+| Universität Hamburg | 7397 |
 | Technische Universität Dresden | 6285 |
 | Rheinische Friedrich-Wilhelms-Universität Bonn | 5688 |
-| Friedrich-Alexander-Universität Erlangen-Nürnberg | 5639 |
+| Friedrich-Alexander-Universität Erlangen-Nürnberg | 5658 |
 | Humboldt-Universität zu Berlin | 5532 |
 
 ### In welchem Bundesland werden die meisten Publikationen veröffentlicht?
@@ -126,13 +125,12 @@ SELECT
   federal_state,
   COUNT(DISTINCT(doi)) AS number_of_articles
 FROM subugoe-collaborative.openalex_walden.works AS oal
-LEFT JOIN UNNEST(authorships) AS aut
-LEFT JOIN UNNEST(aut.affiliations) AS aff
-LEFT JOIN UNNEST(aff.institution_ids) AS oal_inst_id 
+JOIN UNNEST(authorships) AS aut
+JOIN UNNEST(aut.institutions) AS inst
 JOIN subugoe-collaborative.resources.oal_kb_inst_map AS kb
-  ON oal_inst_id = kb.inst_id
+  ON inst.id = kb.inst_id
 WHERE publication_year = 2025 
-  AND type = 'article'
+  AND oal.type = 'article'
   AND inst_type = 'uni'
 GROUP BY federal_state 
 ORDER BY number_of_articles DESC
@@ -140,21 +138,21 @@ ORDER BY number_of_articles DESC
 
 | federal_state | number_of_articles |
 | --- | --- |
-| Nordrhein-Westfalen | 38599 |
-| Bayern | 31790 |
-| Baden-Württemberg | 25889 |
-| Berlin | 16124 |
-| Niedersachsen | 14872 |
+| Nordrhein-Westfalen | 38609 |
+| Bayern | 31813 |
+| Baden-Württemberg | 25895 |
+| Berlin | 16126 |
+| Niedersachsen | 14876 |
 | Hessen | 12500 |
 | Sachsen | 11653 |
-| Hamburg | 8444 |
-| Rheinland-Pfalz | 6352 |
-| Schleswig-Holstein | 5628 |
+| Hamburg | 8449 |
+| Rheinland-Pfalz | 6354 |
+| Schleswig-Holstein | 5630 |
 | Thüringen | 4550 |
 | Sachsen-Anhalt | 4166 |
-| Brandenburg | 3991 |
-| Mecklenburg-Vorpommern | 3774 |
-| Bremen | 2474 |
+| Brandenburg | 3992 |
+| Mecklenburg-Vorpommern | 3776 |
+| Bremen | 2475 |
 | Saarland | 2409 |
 
 ### Welche Einrichtungen in OpenAlex gehören zur Universität Göttingen?
