@@ -110,14 +110,14 @@ LIMIT 10
 | --- | --- |
 | Ludwig-Maximilians-Universität München (LMU) | 9794 |
 | Technische Universität München (TUM) | 9394 |
-| Ruprecht-Karls-Universität Heidelberg | 9229 |
+| Ruprecht-Karls-Universität Heidelberg | 9152 |
 | Rheinisch-Westfälische Technische Hochschule Aachen | 8551 |
 | Charité - Universitätsmedizin Berlin | 7768 |
-| Universität Hamburg | 7416 |
-| Technische Universität Dresden | 6321 |
-| Friedrich-Alexander-Universität Erlangen-Nürnberg | 5695 |
+| Universität Hamburg | 7394 |
+| Technische Universität Dresden | 6285 |
 | Rheinische Friedrich-Wilhelms-Universität Bonn | 5688 |
-| Eberhard Karls Universität Tübingen | 5549 |
+| Friedrich-Alexander-Universität Erlangen-Nürnberg | 5639 |
+| Humboldt-Universität zu Berlin | 5532 |
 
 ### In welchem Bundesland werden die meisten Publikationen veröffentlicht?
 
@@ -140,22 +140,22 @@ ORDER BY number_of_articles DESC
 
 | federal_state | number_of_articles |
 | --- | --- |
-| Nordrhein-Westfalen | 38696 |
-| Bayern | 31845 |
-| Baden-Württemberg | 25973 |
+| Nordrhein-Westfalen | 38599 |
+| Bayern | 31790 |
+| Baden-Württemberg | 25889 |
 | Berlin | 16124 |
 | Niedersachsen | 14872 |
-| Hessen | 12888 |
-| Sachsen | 11735 |
-| Hamburg | 8466 |
-| Rheinland-Pfalz | 6435 |
+| Hessen | 12500 |
+| Sachsen | 11653 |
+| Hamburg | 8444 |
+| Rheinland-Pfalz | 6352 |
 | Schleswig-Holstein | 5628 |
 | Thüringen | 4550 |
-| Sachsen-Anhalt | 4175 |
+| Sachsen-Anhalt | 4166 |
 | Brandenburg | 3991 |
 | Mecklenburg-Vorpommern | 3774 |
 | Bremen | 2474 |
-| Saarland | 2437 |
+| Saarland | 2409 |
 
 ### Welche Einrichtungen in OpenAlex gehören zur Universität Göttingen?
 
