@@ -176,6 +176,15 @@ WHERE parent_inst_name = 'Georg-August-Universität Göttingen'
 | Universitätsverlag Göttingen | Georg-August-Universität Göttingen | child | uni | Niedersachsen | https://openalex.org/I4405263319 | https://openalex.org/I74656192 | https://ror.org/057621003 | https://ror.org/01y9bpm73 |
 | Campus-Institut Data Science (CIDAS) | Georg-August-Universität Göttingen | child | uni | Niedersachsen | https://openalex.org/I4405263634 | https://openalex.org/I74656192 | https://ror.org/044sxzm68 | https://ror.org/01y9bpm73 |
 
+## Wie verändert das Mapping die Zuordnung von Zeitschriftenartikeln zu Universitäten in OpenAlex im Vergleich zu den originalen KB-Daten?
+
+<figure>
+    <img src="charts/example1.png" width="100%" />
+    <figcaption>
+        <b>Abbildung 1:</b> Vergleich der Institutionszuordnung für Zeitschriftenartikel in OpenAlex und KB vor und nach dem Mapping. Die Abbildung zeigt ausschließlich die Anzahl der Zeitschrfitenartikel, welche zwischen 2021 und 2025 veröffentlicht wurden. Es wird nur die Zuordnung zu deutschen Universitäten betrachtet.
+    </figcaption>
+</figure>
+
 ## Wie kann ich eine Änderung am Datensatz vornehmen?
 
 Änderungsvorschläge können über ein [Issue](https://github.com/naustica/kb_ror_mapping/issues)
